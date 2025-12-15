@@ -1,18 +1,18 @@
 import EnergyPieChartSection from './Sections/EnergyPieChart/EnergyPieChartSection';
-import OptimalChargeTimeSection from './Sections/OptimalChargeTime/OptimalChargeTimeSection';
+import OptimalChargingTimeSection from './Sections/OptimalChargeTime/OptimalChargingTimeSection';
 
 const MonitoringPanel = () => {
 	return (
 		<div className="relative flex min-h-screen w-full flex-col">
 			<div className="mx-auto flex h-full w-full max-w-7xl grow flex-col p-4">
-				<header className="pt-3 pb-4">
-					<h1 className="text-2xl text-center font-black text-gray-900 sm:text-4xl">
-						Clean Energy Tracker for Great Britain
+				<header>
+					<h1 className="py-2 text-3xl text-center font-black bg-linear-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent sm:text-4xl md:text-5xl">
+						Great Britain's Clean Energy Panel
 					</h1>
 				</header>
 				<main className="flex flex-col gap-3">
 					<EnergyPieChartSection />
-					<OptimalChargeTimeSection />
+					<OptimalChargingTimeSection />
 				</main>
 			</div>
 		</div>

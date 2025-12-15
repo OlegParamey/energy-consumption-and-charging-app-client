@@ -1,23 +1,26 @@
 import UseFetchEnergyMix from '../../../hooks/fetch/UseFetchEnergyMix';
 import EnergyPieChartContainer from './EnergyPieChartContainer';
-import EnergyPieChartLoading from './Loading/EnergyPieChartLoading';
+import EnergyPieChartLoading from '../../../components/Loading/EnergyPieChart/EnergyPieChartLoading';
+import EnergyPieChartError from '../../../components/Error/EnergyPieChart/EnergyPieChartError';
 
-const CircleDiagramsSection = () => {
-	const URL = 'http://localhost:3000/generation-mix-for-three-next-days';
-
-	const { data, loading, error } = UseFetchEnergyMix(URL);
+const EnergyPieChartSection = () => {
+	const { data, loading, error } = UseFetchEnergyMix();
 
 	if (error !== null) {
 		console.log(error);
 	}
 
 	return (
-		<section className="flex flex-col gap-6">
-			<h2 className="px-1 text-2xl text-center font-bold text-gray-900">
-				Energy mixes:
+		<section className="flex flex-col gap-3">
+			<h2 className="px-1 text-3xl text-center font-bold text-gray-700">
+				Energy mixes
 			</h2>
+			{error !== null && !loading && <EnergyPieChartError error={error} />}
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-				{data !== null &&
+				{error === null && loading && <EnergyPieChartLoading />}
+				{error === null &&
+					!loading &&
+					data != null &&
 					data.map(({ dayKey, cleanEnergyPercent, generationMix }) => (
 						<EnergyPieChartContainer
 							generationMix={generationMix}
@@ -26,10 +29,9 @@ const CircleDiagramsSection = () => {
 							dayKey={dayKey}
 						/>
 					))}
-				{loading && <EnergyPieChartLoading />}
 			</div>
 		</section>
 	);
 };
 
-export default CircleDiagramsSection;
+export default EnergyPieChartSection;

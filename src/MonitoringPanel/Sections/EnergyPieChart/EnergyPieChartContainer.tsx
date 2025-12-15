@@ -13,7 +13,7 @@ const EnergyPieChartContainer: React.FC<EnergyPieChartContainerProps> = ({
 
 	return (
 		<div className="flex flex-col rounded-xl border border-gray-200 bg-white p-6">
-			<p className="text-xl text-center font-semibold text-gray-900">
+			<p className="text-xl sm:text-2xl text-center font-semibold text-gray-800">
 				{getTextByDayKey(dayKey)}
 			</p>
 			<p className="text-center text-lg text-gray-500">
