@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { OptimalChargingTimeResponseType } from '../../MonitoringPanel/Sections/OptimalChargeTime/OptimalChargingTime.type';
+import type { OptimalChargingTimeResponseType } from '../../MonitoringPanel/Sections/OptimalChargingTime/OptimalChargingTime.type';
 import type { CacheItem, FetchDataReturn } from './UseFetch.types';
 
 const CACHE_TTL = 30 * 60 * 1000;

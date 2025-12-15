@@ -1,4 +1,4 @@
-import type { OptimalChargingTimeResponseType } from '../../MonitoringPanel/Sections/OptimalChargeTime/OptimalChargingTime.type';
+import type { OptimalChargingTimeResponseType } from '../../MonitoringPanel/Sections/OptimalChargingTime/OptimalChargingTime.type';
 
 export type FetchDataReturn<DataType> = {
 	data: DataType | null;

@@ -1,5 +1,5 @@
 import EnergyPieChartSection from './Sections/EnergyPieChart/EnergyPieChartSection';
-import OptimalChargingTimeSection from './Sections/OptimalChargeTime/OptimalChargingTimeSection';
+import OptimalChargingTimeSection from './Sections/OptimalChargingTime/OptimalChargingTimeSection';
 
 const MonitoringPanel = () => {
 	return (

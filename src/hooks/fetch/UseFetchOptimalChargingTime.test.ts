@@ -1,6 +1,6 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import UseFetchOptimalChargingTime from './UseFetchOptimalChargingTime';
-import type { OptimalChargingTimeResponseType } from '../../MonitoringPanel/Sections/OptimalChargeTime/OptimalChargingTime.type';
+import type { OptimalChargingTimeResponseType } from '../../MonitoringPanel/Sections/OptimalChargingTime/OptimalChargingTime.type';
 
 const mockResponse: OptimalChargingTimeResponseType = {
 	start: {
